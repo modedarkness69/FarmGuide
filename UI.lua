@@ -327,7 +327,7 @@ local function createMain()
 
     local title = main:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
     title:SetPoint("TOP", 0, -5)
-    title:SetText("FarmGuide — фарм руды и трав")
+    title:SetText("FarmGuide — фарм руды и трав · " .. ns.credit)
 
     local names = { "Сводка", "Зоны", "Ресурсы", "Перепродажа", "HUD", "Настройки" }
     for i, n in ipairs(names) do
@@ -431,9 +431,9 @@ ns:On("AUCTION_HOUSE_SHOW", function()
             edgeSize = 14, insets = { left = 3, right = 3, top = 3, bottom = 3 },
         })
         ahPanel:SetBackdropColor(0, 0, 0, 0.85)
-        local t = ahPanel:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        local t = ahPanel:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
         t:SetPoint("TOP", 0, -8)
-        t:SetText("FarmGuide")
+        t:SetText("FarmGuide " .. ns.credit)
         local b1 = button(ahPanel, "Скан ресурсов", 200, function() ns.ScanResources() end)
         b1:SetPoint("TOP", 0, -26)
         local b2 = button(ahPanel, "Полный скан (перепродажа)", 200, function() ns.FullScan() end)

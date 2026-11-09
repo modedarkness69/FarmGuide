@@ -2,6 +2,8 @@ local ADDON, ns = ...
 FarmGuide = ns
 
 ns.version = "1.1.0"
+ns.author = "modedarkness"
+ns.credit = "|cff888888made by modedarkness|r"
 ns.onLogin = {}
 
 --------------------------------------------------------------------
@@ -102,7 +104,7 @@ ns:On("PLAYER_LOGIN", function()
         local ok, err = pcall(fn)
         if not ok then geterrorhandler()(err) end
     end
-    ns.Print("загружен. |cffffff00/fg|r — окно, |cffffff00/fg hud|r — HUD маршрута.")
+    ns.Print("v" .. ns.version .. " " .. ns.credit .. " загружен. |cffffff00/fg|r — окно, |cffffff00/fg hud|r — HUD маршрута.")
 end)
 
 --------------------------------------------------------------------

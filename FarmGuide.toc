@@ -1,7 +1,7 @@
 ## Interface: 120105, 120100, 120007, 120005, 120001, 120000
-## Title: |cff33ff99FarmGuide|r
+## Title: |cff33ff99FarmGuide|r |cff888888made by modedarkness|r
 ## Notes: Маршруты сбора руды и трав, HUD, аналитика аукциона и подсказки
-## Author: FarmGuide
+## Author: modedarkness
 ## Version: 1.1.0
 ## SavedVariables: FarmGuideDB
 ## IconTexture: Interface\Icons\Trade_Mining

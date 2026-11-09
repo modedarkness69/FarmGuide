@@ -286,7 +286,7 @@ end
 
 local function tooltip(owner)
     GameTooltip:SetOwner(owner, "ANCHOR_LEFT")
-    GameTooltip:AddLine("|cff33ff99FarmGuide|r")
+    GameTooltip:AddDoubleLine("|cff33ff99FarmGuide|r", ns.credit)
     local mapID = ns.GetZonePos()
     if mapID then
         local m = ns.db.maps[mapID]
@@ -373,7 +373,8 @@ local function registerBlizzardSettings()
     title:SetText("FarmGuide")
     local text = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
     text:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -10)
-    text:SetText("Все настройки находятся в окне аддона.")
+    text:SetText("Версия " .. ns.version .. " · " .. ns.credit .. "\nВсе настройки находятся в окне аддона.")
+    text:SetJustifyH("LEFT")
     local b = Button(panel, "Открыть настройки FarmGuide", 260, function()
         if SettingsPanel and SettingsPanel:IsShown() then HideUIPanel(SettingsPanel) end
         ns.OpenTab(6)
